@@ -1,6 +1,12 @@
+import re
 from typing import Optional
 
 from .token import Token, TokenType
+
+specs = (
+    (re.compile(r'^\d+'), TokenType.INTEGER),
+    (re.compile(r'^"[^"]*"'), TokenType.STRING)
+)
 
 
 class Tokenizer:
@@ -13,29 +19,20 @@ class Tokenizer:
         if self.eof:
             return None
 
-        if self.cursor.isdigit():
-            n = ''
-            while not self.eof and self.cursor.isdigit():
-                n += self.cursor
-                self.__pos += 1
+        string = self.string[self.__pos:]
 
-            return Token(TokenType.INTEGER, n)
+        for pattern, token_type in specs:
+            match = re.search(pattern, string)
 
-        if self.cursor == '"':
-            s = ''
-            self.__pos += 1
-            while not self.eof and self.cursor != '"':
-                s += self.cursor
-                self.__pos += 1
+            if not match:
+                continue
 
-            self.__pos += 1
-            return Token(TokenType.STRING, s)
+            self.__pos += len(token_val := match[0])
+            return Token(token_type, token_val)
 
-        raise NotImplementedError("Unknown Token", self.cursor)
-
-    @property
-    def cursor(self) -> str:
-        return self.string[self.__pos]
+        raise NotImplementedError(
+            f"Unknown Token for {self.string} at pos {self.__pos}"
+        )
 
     @property
     def eof(self) -> bool:

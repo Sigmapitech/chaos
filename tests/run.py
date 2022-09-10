@@ -1,18 +1,31 @@
 import sys
 
+from chaos.__main__ import main as __run_chaos
+from chaos.syntax.ast import IntLeaf, AST, Program, Leaf
 
 programs = [
     '3301',
-    '"hello"'
+    '"hello"',
+    '"42"'
 ]
 
 
+def get_ast_leaf(ast: AST) -> AST:
+    assert isinstance(ast, Program)
+    return ast.body
+
+
 def main():
-    for program in programs:
-        run_chaos(program)
+    ast = get_ast_leaf(run_chaos('3301'))
+    assert isinstance(ast, IntLeaf)
+    assert ast.value == 3301
+
+    ast = get_ast_leaf(run_chaos('"42"'))
+    assert isinstance(ast, Leaf)
+    assert ast.value == '"42"'
 
 
-def run_chaos(program):
+def run_chaos(program) -> AST:
     sys.argv.clear()
     sys.argv.extend(
         (
@@ -21,9 +34,7 @@ def run_chaos(program):
         )
     )
 
-    chaos_mod = __import__('chaos.__main__', fromlist='main')
-    chaos_mod.main()
-    del chaos_mod
+    return __run_chaos()
 
 
 if __name__ == '__main__':

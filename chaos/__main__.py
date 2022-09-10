@@ -13,8 +13,8 @@ def main():
     print(sys.argv[1])
     parser = Parser(sys.argv[1])
     print("Parsing AST...")
-    print(parser.parse())
+    return parser.parse()
 
 
 if __name__ == '__main__':
-    main()
+    print(main())
