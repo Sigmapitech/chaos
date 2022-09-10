@@ -19,11 +19,9 @@ class Tokenizer:
                 n += self.cursor
                 self.__pos += 1
 
-            return Token(
-                TokenType.INTEGER,
-                int(n),
-                n
-            )
+            return Token(TokenType.INTEGER, n)
+
+        raise NotImplementedError("Unknown Token")
 
     @property
     def cursor(self) -> str:

@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import auto, IntEnum
-from typing import Any
+from typing import Optional
 
 
 class TokenType(IntEnum):
@@ -13,8 +13,7 @@ class TokenType(IntEnum):
 @dataclass
 class Token:
     type: TokenType
-    value: Any
-    raw: str
+    value: Optional[str]
 
     def __repr__(self):
         token_value = f"=>{self.value}" * (self.value is not None)
