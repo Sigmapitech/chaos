@@ -1,12 +1,18 @@
 import sys
 
-from chaos.__main__ import main as run_chaos
 
-
-program = """3301"""
+programs = [
+    '3301',
+    '"hello"'
+]
 
 
 def main():
+    for program in programs:
+        run_chaos(program)
+
+
+def run_chaos(program):
     sys.argv.clear()
     sys.argv.extend(
         (
@@ -15,7 +21,9 @@ def main():
         )
     )
 
-    run_chaos()
+    chaos_mod = __import__('chaos.__main__', fromlist='main')
+    chaos_mod.main()
+    del chaos_mod
 
 
 if __name__ == '__main__':

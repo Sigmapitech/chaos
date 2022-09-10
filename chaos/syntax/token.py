@@ -5,6 +5,7 @@ from typing import Optional
 
 class TokenType(IntEnum):
     INTEGER = auto()
+    STRING = auto()
 
     def __str__(self):
         return self.name
