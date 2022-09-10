@@ -1,11 +1,19 @@
 import sys
 
+from .syntax.parser import Parser
 from . import __version__
 
 
 def main():
     print(f'Running Chaos v{__version__}')
-    print(sys.argv)
+    if len(sys.argv) < 2:
+        print("Please provide a program as string.")
+        return
+
+    print(sys.argv[1])
+    parser = Parser(sys.argv[1])
+    print("Parsing AST...")
+    print(parser.parse())
 
 
 if __name__ == '__main__':
