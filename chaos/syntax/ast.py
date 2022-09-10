@@ -3,8 +3,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Protocol
 
-from .token import Token
-
 
 class AST(Protocol):
 
@@ -23,10 +21,9 @@ class Program(AST):
 @dataclass
 class Leaf(AST):
     value: Any
-    raw_token: Token
 
     def __repr__(self) -> str:
-        return f"({self.value}, {self.raw_token})"
+        return f"({self.value!r})"
 
 
 class IntLeaf(Leaf):

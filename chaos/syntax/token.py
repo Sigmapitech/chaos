@@ -6,6 +6,10 @@ from typing import Optional
 class TokenType(IntEnum):
     INTEGER = auto()
     STRING = auto()
+    CHAR = auto()
+    WHITESPACE = auto()
+    COMMENT = auto()
+    MULTILINE_COMMENT = auto()
 
     def __str__(self):
         return self.name

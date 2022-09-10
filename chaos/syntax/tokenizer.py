@@ -4,8 +4,13 @@ from typing import Optional
 from .token import Token, TokenType
 
 specs = (
+    (re.compile(r'^\s+'), TokenType.WHITESPACE),
+    (re.compile(r'^/{2}.*'), TokenType.COMMENT),
+    (re.compile(r'^/\*[\s\S]*?\*/'), TokenType.MULTILINE_COMMENT),
+
     (re.compile(r'^\d+'), TokenType.INTEGER),
-    (re.compile(r'^"[^"]*"'), TokenType.STRING)
+    (re.compile(r'^"[^"]*"'), TokenType.STRING),
+    (re.compile(r"^'[^']'"), TokenType.CHAR),
 )
 
 

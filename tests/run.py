@@ -24,6 +24,8 @@ def main():
     assert isinstance(ast, Leaf)
     assert ast.value == '"42"'
 
+    print(run_chaos('/* Epitech\nNorminette */42  "foo" 69'))
+
 
 def run_chaos(program) -> AST:
     sys.argv.clear()
