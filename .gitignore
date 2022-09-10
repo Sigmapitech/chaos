@@ -1,0 +1,9 @@
+# PyCharm configuration folder
+.idea
+
+# Python environement
+venv
+
+# Packaging
+*.egg-info
+*.py[cod]
