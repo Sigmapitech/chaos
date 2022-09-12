@@ -1,4 +1,5 @@
 import sys
+from typing import List
 
 from chaos.__main__ import main as __run_chaos
 from chaos.syntax.ast import IntLeaf, AST, Program, Leaf
@@ -10,21 +11,29 @@ programs = [
 ]
 
 
-def get_ast_leaf(ast: AST) -> AST:
+def get_ast_leaf(ast: AST) -> List[AST]:
     assert isinstance(ast, Program)
     return ast.body
 
 
 def main():
-    ast = get_ast_leaf(run_chaos('3301'))
+    ast = get_ast_leaf(run_chaos('3301'))[0]
     assert isinstance(ast, IntLeaf)
     assert ast.value == 3301
 
-    ast = get_ast_leaf(run_chaos('"42"'))
+    ast = get_ast_leaf(run_chaos('"42"'))[0]
     assert isinstance(ast, Leaf)
     assert ast.value == '"42"'
 
-    print(run_chaos('/* Epitech\nNorminette */42  "foo" 69'))
+    for leaf, item in zip(
+        get_ast_leaf(run_chaos('/* Multiline comment */42  "foo" 69')),
+        (
+            '/* Multiline comment */',
+            42, '  ', '"foo"', ' ', 69
+        )
+    ):
+        assert isinstance(leaf, Leaf)
+        assert leaf.value == item
 
 
 def run_chaos(program) -> AST:

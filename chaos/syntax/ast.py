@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any, Protocol
+from typing import Any, Protocol, List
 
 
 class AST(Protocol):
@@ -12,7 +12,7 @@ class AST(Protocol):
 
 @dataclass
 class Program(AST):
-    body: AST
+    body: List[AST]
 
     def __repr__(self) -> str:
         return repr(self.body)

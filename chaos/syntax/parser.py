@@ -12,7 +12,11 @@ class Parser:
         self._look_ahead = self.tokenizer.next_token()
 
     def parse(self) -> AST:
-        return Program(self.literal())
+        foo = []
+        while self._look_ahead:
+            foo.append(self.literal())
+
+        return Program(foo)
 
     def __eat(self, token_type: TokenType) -> Token:
         token = self._look_ahead
@@ -29,7 +33,6 @@ class Parser:
             )
 
         self._look_ahead = self.tokenizer.next_token()
-        self.literal()
         return token
 
     def integer(self) -> AST:
