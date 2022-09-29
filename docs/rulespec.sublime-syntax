@@ -1,0 +1,13 @@
+%YAML 1.2
+---
+name: Rule Spec
+file_extensions:
+  - rule_spec
+scope: source.rule_spec
+contexts:
+  main:
+    - match: '%\w+:'
+      scope: keyword.operator
+
+    - match: '.*$'
+      scope: string
