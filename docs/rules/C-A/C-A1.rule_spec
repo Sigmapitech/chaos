@@ -1,0 +1,10 @@
+%title: CONSTANT POINTERS
+
+%description: When creating a pointer, if the pointed data is not
+(or should not be) modified by the function, it should be marked as constant
+(const).
+
+%severity: 1
+%check: 0
+
+%file_type: *.c

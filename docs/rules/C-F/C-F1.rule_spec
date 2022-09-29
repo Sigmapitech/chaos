@@ -1,0 +1,4 @@
+%title: COHERENCE OF FUNCTIONS
+%description: A function should only do one thing, not mix different levels of
+ abstraction, and respect the single-responsibility principle 
+ (a function should be changed only for one reason).
