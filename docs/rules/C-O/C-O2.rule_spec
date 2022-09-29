@@ -1,0 +1,5 @@
+%title: File extension
+%description: Sources in a C program must only have .c or .h extensions.
+%severity: 3
+%check: 0
+%file_type: *

@@ -1,0 +1,15 @@
+%title: Naming files and folders
+
+%description: The name of the file must define the logical entity it
+represents, and thus be clear, precise, explicit and unambiguous.
+
+For example,  Files like string.c or algo.c are probably incorrectly named.
+Names like string_toolbox.c or pathfinding.c would be more appropriate.
+
+All file names and folders must be in English, according to the snake_case
+convention (that is, only composed of lowercase, numbers, and underscores).
+
+%severity: 2
+%check: 1
+
+%file_type: *
