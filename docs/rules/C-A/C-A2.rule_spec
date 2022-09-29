@@ -1,8 +1,16 @@
-%title: 
+%title: TYPING
 
-%description: 
+%description: Prefer the most accurate types possible according to the use of
+ the data.
 
-%severity: 
-%check: 
+```c
+int counter; /* C-A2 violation */
+unsigned int counter; /* OK */
+unsigned int get_obj_size(void const *object) /* C-A2 violation */
+size_t get_obj_size(void const *object) /* OK */
+```
 
-%file_type: 
+%severity: 1
+%check: 0
+
+%file_type: *.h *.c

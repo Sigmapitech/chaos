@@ -1,8 +1,25 @@
-%title: 
+%title: STRUCTURES
 
-%description: 
+%description: Variables can be grouped together into a structure if and only if
+ they form a coherent entity. Structures must be kept as small as possible.
 
-%severity: 
-%check: 
+```c
+struct person {                  /* OK */
+	char * name;
+	unsigned int age;
+	float salary;
+};
 
-%file_type: 
+struct data {                    /* C-V2 violation */
+	struct person player;
+	unsigned int width;
+	unsigned int length;
+	unsigned int score;
+	int i;
+};
+```
+
+%severity: 3
+%check: 0
+
+%file_type: *.c *.h

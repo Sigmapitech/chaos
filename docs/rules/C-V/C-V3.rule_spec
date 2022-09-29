@@ -1,8 +1,20 @@
-%title: 
+%title: POINTERS
 
-%description: 
+%description: he pointer symbol (*) must be attached to the associated
+ variable, with no spaces.
 
-%severity: 
-%check: 
+```c
+int *a;                            /* OK */
+int* a;                            /* C - V3 violation */
+int*a;                             /* C - V3 violation */
+int a = 3 * b;                     /* OK */
+int strlen(char const *str);       /* OK */
+```
 
-%file_type: 
+This rule applies only in the pointer context.
+
+
+%severity: 1
+%check: 0
+
+%file_type: *.c *.h
