@@ -1,0 +1,9 @@
+%title: LINE ENDINGS
+
+%description: Line endings must be done in UNIX style (with \n).
+\r must not be used at all, anywhere in the files.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h Makefile

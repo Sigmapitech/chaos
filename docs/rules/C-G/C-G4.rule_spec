@@ -1,0 +1,18 @@
+%title: GLOBAL VARIABLES
+
+%description: Global variables must be avoided as much as possible.
+Only global constants should be used.
+
+A constant is considered as such if and only if it is correctly marked 
+with the const key-word. Watch out, this keyword follows some particular 
+and sometimes surprising rules!
+
+```c
+const float GOLDEN_RATIO = 1.61803398875; /* OK */
+int uptime = 0; /* C - G4 violation */
+```
+
+%severity: 3
+%check: 2
+
+%file_type: *.c *.h

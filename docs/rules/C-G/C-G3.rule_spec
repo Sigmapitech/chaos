@@ -1,0 +1,29 @@
+%title: INDENTATION OF PREPROCESSOR DIRECTIVES
+
+%description: The preprocessor directives must be indented according to the
+ level of indirection.
+
+Indentation must be done in the same way as in the C-L2 rule (groups of 4 
+spaces, no tabulations). However, preprocessor directives must be indented
+ independently of all the other code.
+
+```c
+#ifndef WIN32
+	#include <stdbool.h>
+	#if defined ( __i386__ ) || defined (__x86_64__)
+const size_t PAGE_SIZE = 4096;
+	#else
+		#error " Unknown architecture "
+	#endif
+
+struct coords {
+	int x;
+	int y;
+};
+#endif
+```
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h

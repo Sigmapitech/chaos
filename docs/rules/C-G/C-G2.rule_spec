@@ -1,0 +1,9 @@
+%title: SEPARATION OF FUNCTIONS
+
+%description: Inside a source file, implementations of functions must be 
+separated by one and only one empty line.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c

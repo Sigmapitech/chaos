@@ -1,0 +1,30 @@
+%title: FILE HEADER
+
+%description: C files (.c, .h, . . . ) and every Makefiles must always start with the standard header of the school.
+This header is created in Emacs using the C-c C-h command.
+
+For C files:
+```c
+/*
+** EPITECH PROJECT , $YEAR
+** $ N A M E _ O F _ THE_PROJECT
+** File description :
+** No file there , just an epitech header example .
+** You can even have multiple lines if you want !
+*/
+```
+
+```Makefile
+# #
+# # EPITECH PROJECT , $YEAR
+# # $ N A M E _ O F _ THE_PROJECT
+# # File description :
+# # No file there , just an epitech header example .
+# # You can even have multiple lines if you want !
+# #
+```
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h Makefile

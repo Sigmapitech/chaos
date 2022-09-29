@@ -1,0 +1,9 @@
+%title: EADING/TRAILING LINES
+
+%description: No leading empty lines must be present.
+No more than 1 trailing empty line must be present.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h Makefile

@@ -1,0 +1,8 @@
+%title: INCLUDE
+
+%description: include directive must only include C header (.h) files.
+
+%severity: 3
+%check: 2
+
+%file_type: *.c *.h

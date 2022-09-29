@@ -1,0 +1,8 @@
+%title: TRAILING SPACES
+
+%description: No trailing spaces must be present at the end of a line.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h Makefile

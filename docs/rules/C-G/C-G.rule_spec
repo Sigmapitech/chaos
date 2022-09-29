@@ -1,0 +1,30 @@
+%title: MULTILINE STATEMENT
+
+%description: Multiline statements are allowed.
+Here are examples of properly segmented multiline statements:
+```c
+bool is_between(unsigned int n, unsigned int low_bound,
+    unsigned int high_bound, const char *fail_message);
+
+int main(void)
+{
+    printf("[%s] %s: %dn", get_element_type(), get_element_name(),
+        get _element_value());
+    my_putstr ("Writing multiline statements in C is easy,"
+        " you just need to break the line, and you are done ! " );
+    if (call_to_a_function_with_a_long_but_descriptive_name()
+        && (call_to_another_function_inside_parentheses()
+        || call_to_function_if_the_first_one_did_not_succeed())
+    && final_call_to_function_to_demonstrate_multiline() ) {
+        i_am_a_teapot (418);
+    }
+}
+```
+Do not use the backslash character (\) to break lines in C files, because it will only visually
+break the line.
+As such, you will get into trouble regarding the coding style’s rules!
+
+%severity: 0
+%check: 0
+
+%file_type: *.c *.h
