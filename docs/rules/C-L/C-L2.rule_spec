@@ -1,8 +1,46 @@
-%title: 
+%title: INDENTATION
 
-%description: 
+%description: Each indentation level must be done by using 4 spaces.
+No tabulations may be used for indentation.
+When entering a new scope (e.g.: control structure), the indentation level must
+ be incremented.
 
-%severity: 
-%check: 
+```c
+// OK
+int main(void)
+{
+	char letter = 'H';
+	int number = 14;
+	if (letter == 'H') {
+		my_putchar ('U');
+	} else if (letter == 'G') {
+		if (number != 10)
+			my_putchar ('O') ;
+		else {
+			my_putnbr(97) ;
+		}
+	}
+}
 
-%file_type: 
+// Incorrect
+int main(void)
+{
+int i;
+}
+
+
+// Incorrect
+int main (void)
+{
+    if (true) {
+    return (0);
+    }
+}
+```
+
+Comment blocks’ bodies can be freely indented (with spaces).
+
+%severity: 1
+%check: 1
+
+%file_type: *.c *.h

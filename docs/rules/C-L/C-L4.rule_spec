@@ -1,8 +1,54 @@
-%title: 
+%title: CURLY BRACKETS
 
-%description: 
+%description: Opening curly brackets must be at the end of the line, after the
+ content it precedes, except for functions definitions where they must be
+ placed alone on their line.
 
-%severity: 
-%check: 
+Closing curly brackets must be alone on their line, except in the case of
+ else/else if control structures, enum declarations, or structure declarations
+ (with or without an associated typedef).
 
-%file_type: 
+```c
+if (cond) {return ptr;}                           /* C-L1 & C-L4 violations */
+while (cond) {                                    /* OK */
+   do_something();
+}
+if (cond)
+{                                                 /* C-L4 violation */
+    ...
+} else {                                          /* OK */
+    ...
+}
+if (cond) {                                       /* OK */
+    ...
+}                                                 /* C-L4 violation */
+else {
+    ...
+}
+if (cond)                                         /* Tolerated */
+    return ptr;
+int print_env(void)                               /* OK */
+{
+    ...
+}
+int print_env(void) {                             /* C-L4 violation */
+    ...
+}
+struct coords {                                   /* OK */
+    int x;
+    int y;
+};
+struct coords
+{                                                 /* C-L4 violation */
+    int x;
+    int y;
+};
+```
+
+Even though this primarily applies to the contents of functions, this rule also
+ applies to code outside functions, including header files’.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h

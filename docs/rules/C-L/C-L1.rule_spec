@@ -1,0 +1,27 @@
+%title: CODE LINE CONTENT
+
+%description: A line must correspond to only one statement.
+Typical situations to avoid include:
+
+- several assignments on the same line;
+- several semicolons on the same line used to separate several statements;
+- a condition and an assignment on the same line.
+
+The only exception to this rule is the for loop control structure, which
+ idiomatically allows several operations on the same line 
+ (initialization, loop condition, and post-iteration operation).
+
+```c
+a = b = c = 0;                                         /* C-L1 violation */
+a ++; b ++;                                            /* C-L1 violation */
+if ((ptr = malloc(sizeof(struct my_struct))) != NULL)  /* C-L1 violation */
+if (cond) return (ptr);                                /* C-L1 violation */
+for (int i = 0; i < 42; i ++) {                        /* OK */
+	...
+}
+```
+
+%severity: 2
+%check: 0
+
+%file_type: *.c *.h

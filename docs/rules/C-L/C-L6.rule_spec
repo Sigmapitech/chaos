@@ -1,8 +1,32 @@
-%title: 
+%title: LINE JUMPS
 
-%description: 
+%description: A line break must separate the variable declarations from the
+ remainder of the function.
 
-%severity: 
-%check: 
+No other line breaks must be present in the scope of a function.
 
-%file_type: 
+```c
+int sys_open(char const *path)
+{
+    int fd = thread_reserve_fd();
+    struct filehandler *fhandler = NULL;     
+                                              /* OK */
+    if (fd < 0) {
+        return -1;
+    }
+    if (fs_open(path, &fhandler)) {
+        thread_free_fd(fd);
+        return -1;
+    }
+                                              /* C-L6 violation */
+    thread_set_fd_handler(fd, fhandler);
+    return fd;
+}
+```
+
+No line break is necessary if there are no variable declarations in the function.
+
+%severity: 2
+%check: 0
+
+%file_type: *.c *.h

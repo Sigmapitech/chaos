@@ -1,8 +1,43 @@
-%title: 
+%title: VARIABLE DECLARATIONS
 
-%description: 
+%description: Variables must be declared at the beginning of the scope of the 
+function. Only one variable must be declared per line.
 
-%severity: 
-%check: 
+The for control structures may also optionally declare variables in their 
+initialization part.
 
-%file_type: 
+Nothing prevents you from declaring and assigning a variable on the same line.
+
+
+```c
+long calculate_gcd(long a, long b)
+{
+    long biggest, smallest;                 /* C-L5 violation */
+    biggest = MAX(a, b);
+    smallest = MIN(a, b);
+    long rest;                              /* C- L5 violation */
+    while (smallest > 0) {
+        rest = biggest % smallest;
+        biggest = smallest;
+        smallest = rest;
+    }
+    return a;
+}
+
+int main (void)
+{
+    int forty_two = 42;                              /* OK */
+    int max = 12;                                    /* OK */
+
+    for (unsigned int i = 0; i < max; i ++) {        /* OK */
+        calculate_gcd(forty_two, max);
+    }
+
+    return 0;
+}
+```
+
+%severity: 3
+%check: 0
+
+%file_type: *.c *.h
