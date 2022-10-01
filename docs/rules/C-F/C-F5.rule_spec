@@ -1,0 +1,10 @@
+%title: NUMBER OF PARAMETERS
+
+%description: A function must not have more than 4 parameters.
+Writing variadic functions is allowed, but they must not be used to circumvent
+ the limit of 4 parameters.
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h

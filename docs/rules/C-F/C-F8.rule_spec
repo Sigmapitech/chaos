@@ -1,0 +1,14 @@
+%title: COMMENTS INSIDE A FUNCTION
+
+%description: There must be no comment within a function.
+The function should be readable and self-explanatory, without further need for
+ explanations inside it.
+
+The length of a function is inversely proportional to its complexity, so a 
+complicated function should be short. In that case, a header comment should be
+ enough to explain it.
+
+%severity: 1
+%check: 2
+
+%file_type: *.c *.h

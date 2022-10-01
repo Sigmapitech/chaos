@@ -1,0 +1,20 @@
+%title: STRUCTURES AS PARAMETERS
+
+%description: Structures must be transmitted as arguments using a pointer,
+ not by copy.
+
+```c
+void make_some_coffee(struct my_struct *board, int i) /* OK */
+{
+	...
+}
+void make_some_poison(struct my_struct board, int i) /* C-F7 violation */
+{
+	...
+}
+```
+
+%severity: 2
+%check: 0
+
+%file_type: *.c *.h

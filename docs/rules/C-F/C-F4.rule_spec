@@ -1,0 +1,17 @@
+%title: NUMBER OF LINES
+
+%description: The body of a function should be as short as possible, and must
+ not exceed 20 lines.
+
+```c
+int main(void) /* this function is 2-line-long */
+{
+	printf("hello, world\n");
+	return 0;
+}
+```
+
+%severity: 2
+%check: 2
+
+%file_type: *.c *.h
