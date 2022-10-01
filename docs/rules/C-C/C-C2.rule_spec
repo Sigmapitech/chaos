@@ -1,8 +1,23 @@
-%title: 
+%title: TERNARY OPERATORS
 
-%description: 
+%description: The use of ternary operators is allowed as far as it is kept
+ simple and readable, and it does not obfuscate code.
 
-%severity: 
-%check: 
+You must never use nested or chained ternary operators.
+You must always use the value produced by a ternary operator
+ (by assigning it to a variable or returning it for example).
 
-%file_type: 
+```c
+parity_t year_parity = ( year % 2 == 0) ? EVEN : ODD ; /* OK */
+return ( a > 0 ? a : 0) ; /* OK */
+unsigned int safe_sum = is_sum_overflow (a , b ) ? 0 : a + b ; /* OK */
+char * result = is_ co rr ect ly _f or mat te d ( str ) ? str : format ( str ) ; /* OK */
+int a = b > 10 ? c < 20 ? 50 : 80 : e == 2 ? 4 : 8; /* C - C2 violation */
+already_checked ? go_there () : check () ; /* C - C2 violation */
+first () ? second () : 0; /* C - C2 violation */
+```
+
+%severity: 3
+%check: 0
+
+%file_type: *.c *.h

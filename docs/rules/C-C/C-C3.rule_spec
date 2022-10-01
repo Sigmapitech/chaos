@@ -1,8 +1,10 @@
-%title: 
+%title: goto
 
-%description: 
+%description: Using the goto keyword is forbidden, because it can very quickly
+ participate in the creation of infamous spaghetti code, which is completely
+ illegible.
 
-%severity: 
-%check: 
+%severity: 3
+%check: 2
 
-%file_type: 
+%file_type: *.c *.h

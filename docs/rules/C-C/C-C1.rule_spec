@@ -1,8 +1,55 @@
-%title: 
+%title: CONDITIONAL BRANCHING
 
-%description: 
+%description: A conditionnal block (while, for, if, else, ...) must not contain
+ more than 3 branches.
 
-%severity: 
-%check: 
+Arrays of function pointers and switch instructions are very useful when you
+ want to have numerous different behaviours that can result from the check of
+ an element. Take care to choose the most suitable one.
+
+Nested conditional branches with a depth of 3 or more must be avoided.
+
+If you need multiple levels of branches, you probably need to refactor your
+ function into sub-functions.
+
+```c
+if (...) {                           /* OK */
+	do_something ();
+} else if (...) {
+	do_s omething_else ();
+} else {
+	do_s omething_more ();
+}
+
+if (...) {
+	do_something ();
+} else if (...) {
+	do_s omething_else();
+} else if (...) {
+	do_s omething_more();
+} else {                            /* C - C1 violation */
+	do_one_last_thing();
+}
+
+while (...) {                       /* OK */
+	if (...) {
+	   do_something();
+	}
+}
+
+while (...) {                       /* C - C1 violation */
+	for (...) {
+		if (...) {
+			do_something();
+		}
+	}
+}
+```
+
+else if branching does not add one, but two levels of depth, as it is considered to be an
+if inside an else.
+
+%severity: 3
+%check: 2
 
 %file_type: 
