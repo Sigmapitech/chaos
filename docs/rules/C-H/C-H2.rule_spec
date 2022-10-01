@@ -1,8 +1,9 @@
-%title: 
+%title: INCLUDE GUARD
 
-%description: 
+%description: Headers must be protected from double inclusion.
+The method and the conventions used are left free.
 
-%severity: 
-%check: 
+%severity: 3
+%check: 2
 
-%file_type: 
+%file_type: *.h

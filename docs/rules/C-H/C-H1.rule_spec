@@ -1,8 +1,20 @@
-%title: 
+%title: CONTENT
 
-%description: 
+%description: Header files must only contain:
+- function prototypes,
+- type declarations,
+- global variable/constant declarations,
+- macros,
+- static inline functions.
 
-%severity: 
-%check: 
+All these elements must only be found in header files, and thus not in source
+ files.
 
-%file_type: 
+Including a header from another header is allowed as long as the header file
+ itself needs it. If a source file requires it, but not the header file itself,
+ it should then be included in the source file instead.
+
+%severity: 3
+%check: 1
+
+%file_type: *.h
