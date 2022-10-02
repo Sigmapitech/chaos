@@ -1,42 +1,66 @@
-import argparse
+import os
 import sys
 
-from . import __version__
+from chaos import __version__
+from chaos.cli import CLI, Command, ModifierArgument, NamedArgument
+from chaos.commands import lint, fix, more
+
+cli = CLI(
+    version=__version__,
+    description='Chaos is a linter for ensuring the Epitech norm',
+    epilog='CHAOS: heuristic analyzer of syntax',
+    global_args=(
+        ModifierArgument(
+            short='d',
+            name='debug',
+            help_="Enable debug mode",
+        ),
+    ),
+    commands=(
+        Command(
+            name='lint',
+            command=lint,
+            args=(
+                NamedArgument(
+                    'path',
+                    help_='Path to the file to be linted',
+                    validation=os.path.exists
+                ),
+            ),
+            namespace=False
+        ),
+        Command(
+            name='lint',
+            command=fix,
+            args=(
+                NamedArgument(
+                    'path',
+                    help_='Path to the file to be fixed',
+                    validation=os.path.exists
+                ),
+            )
+        ),
+        Command(
+            name='more',
+            command=more,
+            args=(
+                NamedArgument(
+                    'rule',
+                    help_='Name of the lint rule',
+                    validation=lambda: True
+                ),
+            ),
+        )
+    )
+)
 
 
 def main():
-    _, *args = sys.argv
+    args = sys.argv[1:]
+    print(cli)
 
-    parser = argparse.ArgumentParser(
-
-    )
-
-    parser.add_argument(
-        '-d',
-        '--debug',
-        action='store_true',
-        help='Enable debug mode'
-    )
-
-    parser.add_argument(
-        '-v', '--version',
-        action='version', version=f'%(prog)s {__version__}'
-    )
-
-    subparsers = parser.add_subparsers(dest='command')
-    info = subparsers.add_parser('more', help='Details about a given rule')
-    info.add_argument('rule', type=str, help='The rule to inspect')
-
-    fix = subparsers.add_parser('fix', help='Format the code to fix a bunch of rules')
-    fix.add_argument('path', type=str, help='Path to the code to format')
-
-    run = subparsers.add_parser('run', help='Run the rule')
-    run.add_argument('path', type=str, help='Path to the code to lint')
-
-    parsed_args = parser.parse_args(args)
-
-    print('=>', parsed_args.command)
-    print(parsed_args)
+    # command = cli.parse_args(args) or cli.get_command('help')
+    # command.run()
 
 
 if __name__ == '__main__':
