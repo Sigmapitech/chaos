@@ -9,7 +9,7 @@ $(VENV)/chaos: $(V_BIN)/python
 	$(V_BIN)/pip install -e .
 
 
-$(V_BIN)/python:
+$(V_BIN)/%:
 	python3 -m venv $(VENV)
 	chmod +x $(V_BIN)/activate
 	./$(V_BIN)/activate
