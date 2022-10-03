@@ -1,6 +1,6 @@
-%title: LINE BREAK AT THE END OF FILE
+@title: LINE BREAK AT THE END OF FILE
 
-%description: Files must end with a line break.
+@description: Files must end with a line break.
 
 ```bash
 ∼/Epitech Documentation> cat -e correct.c
@@ -14,7 +14,7 @@ return 0;$
 }
 ```
 
-%severity: 1
-%check: 2
+@severity: 1
+@check: 2
 
-%file_type: *.h *.c
+@file_type: *.h *.c

@@ -1,6 +1,6 @@
-%title: TERNARY OPERATORS
+@title: TERNARY OPERATORS
 
-%description: The use of ternary operators is allowed as far as it is kept
+@description: The use of ternary operators is allowed as far as it is kept
  simple and readable, and it does not obfuscate code.
 
 You must never use nested or chained ternary operators.
@@ -17,7 +17,7 @@ already_checked ? go_there () : check () ; /* C - C2 violation */
 first () ? second () : 0; /* C - C2 violation */
 ```
 
-%severity: 3
-%check: 0
+@severity: 3
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

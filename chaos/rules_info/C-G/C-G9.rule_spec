@@ -1,13 +1,13 @@
-%title: TRAILING SPACES
+@title: TRAILING SPACES
 
-%description: Non-trivial constant values should be defined either as a global
+@description: Non-trivial constant values should be defined either as a global
  constant or as a macro.
 
 This greatly helps you when you want to modify an important value in your 
 program, because you do not need to find all occurences of this value 
 scattered throughout your code, and only need to change it in one place.
 
-%severity: 2
-%check: 0
+@severity: 2
+@check: 0
 
-%file_type: *.c *.h Makefile
+@file_type: *.c *.h Makefile

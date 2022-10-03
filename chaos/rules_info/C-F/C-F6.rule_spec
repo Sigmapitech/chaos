@@ -1,6 +1,6 @@
-%title: FUNCTIONS WITHOUT PARAMETERS
+@title: FUNCTIONS WITHOUT PARAMETERS
 
-%description: A function taking no parameters must take void as a parameter in
+@description: A function taking no parameters must take void as a parameter in
  the function declaration.
 
 ```c
@@ -11,7 +11,7 @@ phys_addr_t alloc_frame(void); /* OK */
 The two syntaxes above have different meanings, and have different interesting
  behaviours.
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

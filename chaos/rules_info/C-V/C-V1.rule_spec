@@ -1,6 +1,6 @@
-%title: NAMING IDENTIFIERS
+@title: NAMING IDENTIFIERS
 
-%description: All identifier names must be in English, according to the
+@description: All identifier names must be in English, according to the
  snake_case convention (meaning it is composed exclusively of lowercase, 
  numbers, and underscores).The type names defined with typedef must end with 
  _t. The names of macros and global constants and the content of enums must
@@ -22,7 +22,7 @@ typedef int age ;                                        /* C - V1 violation */
 typedef struct int_couple pixel_t;                       /* OK */
 ```
 
-%severity: 2
-%check: 1
+@severity: 2
+@check: 1
 
-%file_type: *.c *.h
+@file_type: *.c *.h

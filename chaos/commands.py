@@ -1,3 +1,6 @@
+from chaos.rules_info import print_rule
+
+
 def fix_command(path):
     print("fix")
 
@@ -6,5 +9,5 @@ def lint_command(path):
     print("lint")
 
 
-def more_command(rule):
-    print("more")
+more_command = print_rule
+

@@ -1,6 +1,6 @@
-%title: VARIABLE DECLARATIONS
+@title: VARIABLE DECLARATIONS
 
-%description: Variables must be declared at the beginning of the scope of the 
+@description: Variables must be declared at the beginning of the scope of the 
 function. Only one variable must be declared per line.
 
 The for control structures may also optionally declare variables in their 
@@ -37,7 +37,7 @@ int main (void)
 }
 ```
 
-%severity: 3
-%check: 0
+@severity: 3
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

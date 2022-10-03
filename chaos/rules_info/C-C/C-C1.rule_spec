@@ -1,6 +1,6 @@
-%title: CONDITIONAL BRANCHING
+@title: CONDITIONAL BRANCHING
 
-%description: A conditionnal block (while, for, if, else, ...) must not contain
+@description: A conditionnal block (while, for, if, else, ...) must not contain
  more than 3 branches.
 
 Arrays of function pointers and switch instructions are very useful when you
@@ -49,7 +49,7 @@ while (...) {                       /* C - C1 violation */
 else if branching does not add one, but two levels of depth, as it is considered to be an
 if inside an else.
 
-%severity: 3
-%check: 2
+@severity: 3
+@check: 2
 
-%file_type: 
+@file_type: 

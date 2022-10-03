@@ -1,10 +1,10 @@
-%title: File coherence
-%description: A source file must match a logical entity, and group all the
+@title: File coherence
+@description: A source file must match a logical entity, and group all the
 functions associated with that entity. Grouping functions that are not related
 to each other in the same file has to be avoided
-%warning: Beyond 5 functions in your file, you must subdivide your logical entity
+@warning: Beyond 5 functions in your file, you must subdivide your logical entity
 into several sub-entities.
 entities.
-%severity: 3
-%check: 1
-%file_type: *.c *.h
+@severity: 3
+@check: 1
+@file_type: *.c *.h

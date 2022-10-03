@@ -1,12 +1,12 @@
-%title: STATIC
+@title: STATIC
 
-%description: Global variables and functions that are not used outside the 
+@description: Global variables and functions that are not used outside the 
 compilation unit to which they belong should be marked with the static keyword.
 
 Be careful not to confuse the different uses of the static keyword. It does 
 very different things depending on where you use it.
 
-%severity: 1
-%check: 0
+@severity: 1
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

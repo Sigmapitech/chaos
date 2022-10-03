@@ -1,17 +1,17 @@
-%title: MACROS
+@title: MACROS
 
-%description: Macros must match only one statement, and fit on a single line.
+@description: Macros must match only one statement, and fit on a single line.
 
 ```c
 # define PI 3.1459265358979323846                                 /* OK */
 # define DELTA (a, b, c) ((b) * (b) - 4 * (a) * (c))              /* OK */
-# define PRINT_NEXT(num) {num ++; printf("%d", num);}    /* C - H3 violation */
+# define PRINT_NEXT(num) {num ++; printf("\d", num);}    /* C - H3 violation */
 # define ERROR_MESSAGE "Multiline macros" \
                        "have to be avoided"              /* C - H3 violation */
 ```
 
 
-%severity: 3
-%check: 0
+@severity: 3
+@check: 0
 
-%file_type: *.h
+@file_type: *.h

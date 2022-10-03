@@ -1,6 +1,6 @@
-%title: NUMBER OF COLUMNS
+@title: NUMBER OF COLUMNS
 
-%description: The length of a line must not exceed 80 columns 
+@description: The length of a line must not exceed 80 columns 
 (not to be confused with 80 characters).
 
 A tab represents 1 character, but several columns.
@@ -10,7 +10,7 @@ The line break character (\n) is part of the line, and thus counts in its
 Even though this rule especially applies to functions, it applies to all C
  files, as well as Makefiles.
 
-%severity: 3
-%check: 2
+@severity: 3
+@check: 2
 
-%file_type: *
+@file_type: *

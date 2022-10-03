@@ -1,6 +1,6 @@
-%title: NUMBER OF LINES
+@title: NUMBER OF LINES
 
-%description: The body of a function should be as short as possible, and must
+@description: The body of a function should be as short as possible, and must
  not exceed 20 lines.
 
 ```c
@@ -11,7 +11,7 @@ int main(void) /* this function is 2-line-long */
 }
 ```
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

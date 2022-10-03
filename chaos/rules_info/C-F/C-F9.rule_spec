@@ -1,9 +1,9 @@
-%title: NESTED FUNCTIONS
+@title: NESTED FUNCTIONS
 
-%description: Nested functions are not allowed, because they are an extension
+@description: Nested functions are not allowed, because they are an extension
  of the GNU C standard, and because they greatly increase complexity.
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

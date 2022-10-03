@@ -1,3 +1,7 @@
+from .print_rule import print_rule
+from .rule_spec import RuleSpec, Severity, Check
+
+
 ruleset = [
     f'{x}{id_y}'
     for x, y in (
@@ -7,4 +11,4 @@ ruleset = [
     for id_y in range(1, y + 1)
 ]
 
-__all__ = ('ruleset',)
+__all__ = ('ruleset', 'print_rule', 'RuleSpec', 'Severity', 'Check')

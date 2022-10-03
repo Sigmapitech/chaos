@@ -1,6 +1,6 @@
-%title: TYPING
+@title: TYPING
 
-%description: Prefer the most accurate types possible according to the use of
+@description: Prefer the most accurate types possible according to the use of
  the data.
 
 ```c
@@ -10,7 +10,7 @@ unsigned int get_obj_size(void const *object) /* C-A2 violation */
 size_t get_obj_size(void const *object) /* OK */
 ```
 
-%severity: 1
-%check: 0
+@severity: 1
+@check: 0
 
-%file_type: *.h *.c
+@file_type: *.h *.c

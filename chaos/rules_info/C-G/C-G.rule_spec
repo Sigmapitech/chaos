@@ -1,6 +1,6 @@
-%title: MULTILINE STATEMENT
+@title: MULTILINE STATEMENT
 
-%description: Multiline statements are allowed.
+@description: Multiline statements are allowed.
 Here are examples of properly segmented multiline statements:
 ```c
 bool is_between(unsigned int n, unsigned int low_bound,
@@ -24,7 +24,7 @@ Do not use the backslash character (\) to break lines in C files, because it wil
 break the line.
 As such, you will get into trouble regarding the coding style’s rules!
 
-%severity: 0
-%check: 0
+@severity: 0
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

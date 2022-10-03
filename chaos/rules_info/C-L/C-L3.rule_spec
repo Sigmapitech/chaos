@@ -1,6 +1,6 @@
-%title: SPACES
+@title: SPACES
 
-%description: When using a space as a separator, one and only one space
+@description: When using a space as a separator, one and only one space
  character must be used.
 
 Tabulations cannot be used as a separator.
@@ -36,7 +36,7 @@ for (size_t i;str[i] != '\0' ; i++) {              /* C - L3 violation ( twice )
 }
 ```
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

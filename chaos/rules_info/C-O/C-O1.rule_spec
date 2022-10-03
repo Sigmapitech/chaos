@@ -1,7 +1,7 @@
-%title: Contents of the Repository
-%description: The repository must not contain compiled
+@title: Contents of the Repository
+@description: The repository must not contain compiled
 (.o, .gch, .a, .so, ... ), temporary or unnecessary files
 (*~, #*#, .d, toto, ... ).
-%severity: 3
-%check: 2
-%file_type: *
+@severity: 3
+@check: 2
+@file_type: *

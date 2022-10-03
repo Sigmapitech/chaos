@@ -1,12 +1,12 @@
-%title: COHERENCE OF FUNCTIONS
-%description: A function should only do one thing, not mix different levels of
+@title: COHERENCE OF FUNCTIONS
+@description: A function should only do one thing, not mix different levels of
  abstraction, and respect the single-responsibility principle 
  (a function should be changed only for one reason).
 
 For example, a call to malloc(), a call to allocate_user(), and a call to 
 create_user() all have 3 different levels of abstraction.
 
-%severity: 2
-%check: 0
+@severity: 2
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

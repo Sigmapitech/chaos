@@ -1,6 +1,6 @@
-%title: CONTENT
+@title: CONTENT
 
-%description: Header files must only contain:
+@description: Header files must only contain:
 - function prototypes,
 - type declarations,
 - global variable/constant declarations,
@@ -14,7 +14,7 @@ Including a header from another header is allowed as long as the header file
  itself needs it. If a source file requires it, but not the header file itself,
  it should then be included in the source file instead.
 
-%severity: 3
-%check: 1
+@severity: 3
+@check: 1
 
-%file_type: *.h
+@file_type: *.h

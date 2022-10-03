@@ -1,6 +1,6 @@
-%title: NAMING FUNCTIONS
+@title: NAMING FUNCTIONS
 
-%description: The name of a function must define the task it executes and must
+@description: The name of a function must define the task it executes and must
  contain a verb.
 
 or example, the vowels_nb() and dijkstra() functions are incorrectly named.
@@ -12,7 +12,7 @@ All function names must be in English, according to the snake_case convention
 Abbreviations are tolerated if they significantly reduce the name without 
 losing meaning.
 
-%severity: 2
-%check: 1
+@severity: 2
+@check: 1
 
-%file_type: *.c *.h
+@file_type: *.c *.h

@@ -1,6 +1,6 @@
-%title: CODE LINE CONTENT
+@title: CODE LINE CONTENT
 
-%description: A line must correspond to only one statement.
+@description: A line must correspond to only one statement.
 Typical situations to avoid include:
 
 - several assignments on the same line;
@@ -21,7 +21,7 @@ for (int i = 0; i < 42; i ++) {                        /* OK */
 }
 ```
 
-%severity: 2
-%check: 0
+@severity: 2
+@check: 0
 
-%file_type: *.c *.h
+@file_type: *.c *.h

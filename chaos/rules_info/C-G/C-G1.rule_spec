@@ -1,6 +1,6 @@
-%title: FILE HEADER
+@title: FILE HEADER
 
-%description: C files (.c, .h, . . . ) and every Makefiles must always start with the standard header of the school.
+@description: C files (.c, .h, . . . ) and every Makefiles must always start with the standard header of the school.
 This header is created in Emacs using the C-c C-h command.
 
 For C files:
@@ -24,7 +24,7 @@ For C files:
 # #
 ```
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h Makefile
+@file_type: *.c *.h Makefile

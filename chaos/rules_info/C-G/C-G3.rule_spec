@@ -1,6 +1,6 @@
-%title: INDENTATION OF PREPROCESSOR DIRECTIVES
+@title: INDENTATION OF PREPROCESSOR DIRECTIVES
 
-%description: The preprocessor directives must be indented according to the
+@description: The preprocessor directives must be indented according to the
  level of indirection.
 
 Indentation must be done in the same way as in the C-L2 rule (groups of 4 
@@ -23,7 +23,7 @@ struct coords {
 #endif
 ```
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

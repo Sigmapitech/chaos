@@ -1,6 +1,6 @@
-%title: CURLY BRACKETS
+@title: CURLY BRACKETS
 
-%description: Opening curly brackets must be at the end of the line, after the
+@description: Opening curly brackets must be at the end of the line, after the
  content it precedes, except for functions definitions where they must be
  placed alone on their line.
 
@@ -48,7 +48,7 @@ struct coords
 Even though this primarily applies to the contents of functions, this rule also
  applies to code outside functions, including header files’.
 
-%severity: 2
-%check: 2
+@severity: 2
+@check: 2
 
-%file_type: *.c *.h
+@file_type: *.c *.h

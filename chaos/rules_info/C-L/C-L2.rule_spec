@@ -1,6 +1,6 @@
-%title: INDENTATION
+@title: INDENTATION
 
-%description: Each indentation level must be done by using 4 spaces.
+@description: Each indentation level must be done by using 4 spaces.
 No tabulations may be used for indentation.
 When entering a new scope (e.g.: control structure), the indentation level must
  be incremented.
@@ -40,7 +40,7 @@ int main (void)
 
 Comment blocks’ bodies can be freely indented (with spaces).
 
-%severity: 1
-%check: 1
+@severity: 1
+@check: 1
 
-%file_type: *.c *.h
+@file_type: *.c *.h
