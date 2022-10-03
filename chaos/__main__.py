@@ -3,15 +3,11 @@ import sys
 
 from chaos import __version__
 from chaos.validators import file_or_directory, lint_rule
+from chaos.commands import lint_command, fix_command, more_command
 
 parser = argparse.ArgumentParser(
     description='Chaos is a linter for ensuring the Epitech norm',
     epilog='CHAOS: heuristic analyzer of syntax',
-)
-
-parser.add_argument(
-    '-d', '--debug',
-    action='store_true', help='Enable debug mode'
 )
 
 parser.add_argument(
@@ -51,7 +47,15 @@ subparsers.add_parser(
 
 def main():
     parsed_args = parser.parse_args(sys.argv[1:])
-    print('=>', parsed_args)
+
+    if parsed_args.command == 'lint':
+        lint_command(parsed_args.path)
+
+    elif parsed_args.command == 'fix':
+        fix_command(parsed_args.path)
+
+    else:
+        more_command(parsed_args.rule)
 
 
 if __name__ == '__main__':

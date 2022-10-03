@@ -1,10 +1,10 @@
-def fix():
-    ...
+def fix_command(path):
+    print("fix")
 
 
-def lint():
-    ...
+def lint_command(path):
+    print("lint")
 
 
-def more():
-    ...
+def more_command(rule):
+    print("more")
