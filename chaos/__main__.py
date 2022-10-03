@@ -28,7 +28,7 @@ subparsers.add_parser(
 
 subparsers.add_parser(
     'fix',
-    help='Format the code to fix a bunch of rules'
+    help='Format the code to fix a bunch of rules_info'
 ).add_argument(
     'path',
     type=file_or_directory,
