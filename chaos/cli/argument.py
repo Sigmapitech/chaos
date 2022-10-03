@@ -1,5 +1,5 @@
 from abc import abstractmethod
-from typing import Callable
+from typing import Callable, Optional
 
 ArgPredicate = Callable[[str], bool]
 
@@ -32,10 +32,17 @@ class ModifierArgument(Argument):
         short: str,
         name: str,
         help_: str,
+        command_name: Optional[str] = None,
     ):
         super().__init__(help_)
         self.short = f'-{short}'
         self.name = f'--{name}'
+
+        self.command_name = command_name
+
+    @property
+    def is_command(self):
+        return self.command_name is not None
 
     def is_valid(self, argument: str) -> bool:
         return argument in {self.short, self.name}

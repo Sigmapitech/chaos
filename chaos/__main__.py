@@ -17,21 +17,20 @@ cli = CLI(
             help_="Enable debug mode",
         ),
     ),
+    global_command=Command(
+        name='lint',
+        command=lint,
+        args=(
+            NamedArgument(
+                'path',
+                help_='Path to the file to be linted',
+                validation=os.path.exists
+            ),
+        )
+    ),
     commands=(
         Command(
-            name='lint',
-            command=lint,
-            args=(
-                NamedArgument(
-                    'path',
-                    help_='Path to the file to be linted',
-                    validation=os.path.exists
-                ),
-            ),
-            namespace=False
-        ),
-        Command(
-            name='lint',
+            name='fix',
             command=fix,
             args=(
                 NamedArgument(
