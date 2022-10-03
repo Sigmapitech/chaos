@@ -20,7 +20,10 @@ def parse_rule_spec(rule_spec):
         if not line:
             continue
 
-        key, value = line.split(':')
+        key, value, *fp = line.split(':')
+        if fp:
+            value += ':' + ':'.join(fp)
+
         data[key] = value.strip()
 
     return RuleSpec(**data)

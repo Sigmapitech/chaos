@@ -6,22 +6,22 @@ This header is created in Emacs using the C-c C-h command.
 For C files:
 ```c
 /*
-** EPITECH PROJECT , $YEAR
-** $ N A M E _ O F _ THE_PROJECT
-** File description :
-** No file there , just an epitech header example .
+** EPITECH PROJECT, $YEAR
+** $NAME_OF_THE_PROJECT
+** File description:
+** No file there, just an epitech header example.
 ** You can even have multiple lines if you want !
 */
 ```
 
 ```Makefile
-# #
-# # EPITECH PROJECT , $YEAR
-# # $ N A M E _ O F _ THE_PROJECT
-# # File description :
-# # No file there , just an epitech header example .
-# # You can even have multiple lines if you want !
-# #
+##
+## EPITECH PROJECT, $YEAR
+## $NAME_OF_THE_PROJECT
+## File description:
+## No file there, just an epitech header example.
+## You can even have multiple lines if you want !
+##
 ```
 
 @severity: 2
