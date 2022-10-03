@@ -6,6 +6,7 @@ from chaos.cli import CLI, Command, ModifierArgument, NamedArgument
 from chaos.commands import lint, fix, more
 
 cli = CLI(
+    name="chaos",
     version=__version__,
     description='Chaos is a linter for ensuring the Epitech norm',
     epilog='CHAOS: heuristic analyzer of syntax',
@@ -56,11 +57,8 @@ cli = CLI(
 
 
 def main():
-    args = sys.argv[1:]
-    print(cli)
-
-    # command = cli.parse_args(args) or cli.get_command('help')
-    # command.run()
+    command = cli.get_command(*sys.argv[1:])
+    command.run()
 
 
 if __name__ == '__main__':

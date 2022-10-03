@@ -1,3 +1,4 @@
+from abc import abstractmethod
 from typing import Callable
 
 ArgPredicate = Callable[[str], bool]
@@ -8,6 +9,10 @@ class Argument:
     def __init__(self, help_: str):
         self.help = help_
 
+    @abstractmethod
+    def is_valid(self, argument: str) -> bool:
+        ...
+
 
 class NamedArgument(Argument):
 
@@ -15,6 +20,9 @@ class NamedArgument(Argument):
         super().__init__(help_)
         self.name = name
         self.validation = validation
+
+    def is_valid(self, argument: str) -> bool:
+        return self.validation(argument)
 
 
 class ModifierArgument(Argument):
@@ -26,5 +34,8 @@ class ModifierArgument(Argument):
         help_: str,
     ):
         super().__init__(help_)
-        self.short = short
-        self.name = name
+        self.short = f'-{short}'
+        self.name = f'--{name}'
+
+    def is_valid(self, argument: str) -> bool:
+        return argument in {self.short, self.name}

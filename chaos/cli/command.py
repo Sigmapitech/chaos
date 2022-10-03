@@ -19,4 +19,18 @@ class Command:
         self.namespace = namespace
 
     def run(self):
-        ...
+        print(f'running command {self.name}')
+
+
+class InternalCommand(Command):
+
+    def __init__(
+        self,
+        command: Callable[[...], None],
+    ):
+        super().__init__(
+            name=command.__name__,
+            command=command,
+            args=(),
+            namespace=True,
+        )
